@@ -1,22 +1,32 @@
 <md-sidenav-container>
-  <md-sidenav>
-  <nav>
-      <dl>
-      <dt><a href="/">Home</a></dt>
-      </dl>
-
-  </nav>
+  <md-sidenav #sidenav mode="over" opened="false">
+    <div class="side-nav-wrapper">
+      <span id="logo"><a href=""><img src="../assets/logo.png" alt="Logo"></a></span>
+      <nav>
+        <dl>
+          <dt><a href="/">Home</a></dt>
+          <dt><a href="/">Repository</a></dt>
+          <dt><a href="/">Meetings</a></dt>
+        </dl>
+      </nav>
+    </div>
   </md-sidenav>
-  <md-toolbar color="primary" id="header-wrapper">
-      <span id=header-title>My Title</span>
-  </md-toolbar>
-  <nav>
+
+    <md-toolbar color="primary" id="header-wrapper">
+      <span id="header-title">My Site</span>
+    </md-toolbar>
+    <nav>
       <button class="hamburger-button" (click)="sidenav.toggle()">
-          <i class="material-icons material-spec-icon" title="Show navigation">menu</i>
+        <i class="material-icons material-spec-icon" title="Show navigation">menu</i>
       </button>
-  </nav>
-<h1>
-  {{title}}
-</h1>
+    </nav>
+    <form id="search-form" action="../search.html" method="GET">
+      <div class="search-widget">
+        <button class="search-button" (click)="toggleSearchForm()"><i class="material-icons">search</i></button>
+        <button class="search-close-button"><i class="material-icons">close</i></button>
+        <input name="q" type="text" id="search-input" autocomplete="off">
+        <label for="search-input">Search</label>
+      </div>
+    </form>
 
 </md-sidenav-container>
