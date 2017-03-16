@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
-import { RESTAPIModule, CONFIGURATION } from '@plone/restapi-angular';
+import { RESTAPIModule, CONFIGURATION, AuthenticationService } from '@plone/restapi-angular';
 
 import { AppComponent } from './app.component';
 
@@ -25,6 +25,7 @@ import { AppComponent } from './app.component';
         BACKEND_URL: 'http://localhost:8080/Plone',
       }
     },
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
