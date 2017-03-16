@@ -1,0 +1,151 @@
+// Header
+#header-wrapper {
+    #header-title {
+        left: 3em;
+        position: absolute;
+    }
+
+}
+
+.hamburger-button, .search-button, .search-close-button {
+    background: center center no-repeat;
+    background-size: 24px 24px;
+    cursor: pointer;
+    border: 0;
+    display: block;
+    height: 48px;
+    overflow: hidden;
+    top: 8px;
+    width: 48px;
+    z-index: 2;
+    position: fixed;
+}
+.hamburger-button .material-spec-icon {
+    color: #fff;
+    width: 24px;
+    vertical-align: middle;
+}
+
+// Search
+#search-form .search-widget {
+    color: #fff;
+    font-size: 16px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 24px;
+    top: 15px;
+    width: 0;
+    z-index: 2;
+
+    .search-button,
+    .search-close-button,
+    label,
+    label:after {
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .search-button {
+        left: -48px;
+        top: -8px;
+        color: #fff;
+    }
+    .search-close-button {
+        right: -16px;
+        top: -8px;
+        display: none;
+        opacity: 0;
+        color: #fff;
+    }
+    input,
+    input[type=text] {
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,.87);
+        border-radius: 0;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        padding: 5px 0;
+        width: 100%;
+        text-align: left;
+        background: 0;
+        box-shadow: none;
+        color: #fff;
+    }
+    label {
+        bottom: 0;
+        font-size: 16px;
+        font-weight: 300;
+        color: rgba(255,255,255,.54);
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        display: block;
+        top: 7px;
+        width: 100%;
+    }
+    label:after {
+        background-color: rgba(255,255,255,.87);
+        bottom: 0;
+        content: '';
+        height: 2px;
+        width: 10px;
+        left: 45%;
+        visibility: hidden;
+    }
+
+}
+
+// Navigation
+#side-nav nav a, .header-wrapper .header-title, .search-widget label {
+    white-space: nowrap;
+    overflow: hidden;
+}
+md-sidenav-container {
+    width: 100%;
+    height: 100%;
+    md-sidenav {
+        width: 200px;
+        #logo {
+            border-bottom: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            display: block;
+            height: 64px;
+            padding: 12px 0 11px 24px;
+            position: relative;
+            img {
+                max-width: 185px;
+                height: 40px;
+            }
+        }
+        nav {
+            font-size: 13px;
+            padding: 12px 0 10px;
+            dl {
+                margin-top: 0;
+            }
+            dt {
+                border-left: 2px solid transparent;
+                color: #212121;
+                font-weight: 700;
+                margin-top: 0;
+            }
+            a {
+                border-left: 2px solid transparent;
+                color: #212121;
+                display: block;
+                font-weight: 400;
+                letter-spacing: .1px;
+                padding: 25px 10px 25px 22px;
+                text-overflow: ellipsis;
+                text-decoration: none;
+            }
+            a:focus, dt:focus, a:hover, dt:hover {
+                outline: 0;
+            }
+        }
+    }
+}
