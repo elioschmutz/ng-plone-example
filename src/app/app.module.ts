@@ -4,19 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
+import { RESTAPIModule, CONFIGURATION } from '@plone/restapi-angular';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    MaterialModule,
+    RESTAPIModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: CONFIGURATION, useValue: {
+        BACKEND_URL: 'http://localhost:8080/Plone',
+      }
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

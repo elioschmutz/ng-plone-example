@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Traverser } from 'angular-traversal';
+import { PloneViews } from '@plone/restapi-angular';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  constructor(
+    private views:PloneViews,
+    private traverser: Traverser,
+  ) {
+    this.views.initialize();
+  }
 }

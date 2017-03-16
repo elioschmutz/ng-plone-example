@@ -13,7 +13,7 @@
   </md-sidenav>
 
     <md-toolbar color="primary" id="header-wrapper">
-      <span id="header-title">My Site</span>
+      <span id="header-title">Steuerverwaltung</span>
     </md-toolbar>
     <nav>
       <button class="hamburger-button" (click)="sidenav.toggle()">
@@ -29,4 +29,9 @@
       </div>
     </form>
 
+    <h1>{{title}}</h1>
+    <plone-navigation></plone-navigation>
+    <traverser-outlet></traverser-outlet>
 </md-sidenav-container>
+<debug-bar></debug-bar>
+
