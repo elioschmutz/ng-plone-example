@@ -1,0 +1,22 @@
+<md-sidenav-container>
+  <md-sidenav>
+  <nav>
+      <dl>
+      <dt><a href="/">Home</a></dt>
+      </dl>
+
+  </nav>
+  </md-sidenav>
+  <md-toolbar color="primary" id="header-wrapper">
+      <span id=header-title>My Title</span>
+  </md-toolbar>
+  <nav>
+      <button class="hamburger-button" (click)="sidenav.toggle()">
+          <i class="material-icons material-spec-icon" title="Show navigation">menu</i>
+      </button>
+  </nav>
+<h1>
+  {{title}}
+</h1>
+
+</md-sidenav-container>
