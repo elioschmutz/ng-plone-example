@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { RESTAPIModule, CONFIGURATION, AuthenticationService } from '@plone/restapi-angular';
+import { DebugBarComponent } from './debug-bar.component';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DebugBarComponent
   ],
   imports: [
     BrowserModule,
