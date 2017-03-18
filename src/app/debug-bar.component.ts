@@ -8,7 +8,7 @@ import { AuthenticationService } from '@plone/restapi-angular';
   styleUrls: ['./debug-bar.component.scss']
 })
 export class DebugBarComponent implements OnInit {
-  authenticated: string;
+  authenticated: boolean;
   username: string;
 
   constructor(private authenticationService: AuthenticationService) { }
@@ -16,16 +16,21 @@ export class DebugBarComponent implements OnInit {
   ngOnInit(): void {
     let authenticated = this.authenticationService.isAuthenticated.subscribe(
       (authenticated) => {
-        this.authenticated = authenticated && 'Authenticated' || 'Anonymous';
+        this.authenticated = authenticated;
         this.username = authenticated && this.authenticationService.getUserInfo().sub || '';
       });
     this.authenticationService.logout();
   }
-  toggleLogin(): void {
-    if (this.authenticated === 'Authenticated') {
-      this.authenticationService.logout();
-    } else {
-      this.authenticationService.login('admin', 'admin');
-    }
+  getAuthenticationState() {
+     return this.authenticated && 'Authenticated' || 'Anonymous';
+  }
+
+  login(): void {
+    console.log(this.authenticationService.isAuthenticated.value);
+    this.authenticationService.login('admin', 'admin');
+  }
+
+  logout(): void {
+    this.authenticationService.logout();
   }
 }

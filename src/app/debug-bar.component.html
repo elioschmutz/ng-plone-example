@@ -1,6 +1,8 @@
 <md-toolbar color="secondary" id="debug-bar">
   <md-chip-list>
-    <md-chip (click)="toggleLogin()"><span textContent="{{authenticated}}"></span></md-chip>
+    <button md-button *ngIf="authenticated" (click)="logout()"><span textContent="">Logout</span></button>
+    <button md-button *ngIf="!authenticated" (click)="login()"><span textContent="">Login</span></button>
+    <md-chip><span textContent="{{getAuthenticationState()}}"></span></md-chip>
     <md-chip *ngIf="username"><span textContent="Username: {{username}}"></span></md-chip>
   </md-chip-list>
 </md-toolbar>
