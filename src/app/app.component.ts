@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
+
+import { ViewView } from '@plone/restapi-angular';
+
 import { Traverser } from 'angular-traversal';
-import { PloneViews } from '@plone/restapi-angular';
+import { Observable } from 'rxjs/Observable';
+
+import { AdvancedPloneViews } from './traversal';
+
 
 @Component({
   selector: 'app-root',
@@ -10,9 +17,12 @@ import { PloneViews } from '@plone/restapi-angular';
 export class AppComponent {
   title = 'app works!';
   constructor(
-    private views:PloneViews,
+    private views:AdvancedPloneViews,
     private traverser: Traverser,
   ) {
     this.views.initialize();
   }
 }
+
+
+
