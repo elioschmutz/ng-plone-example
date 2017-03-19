@@ -6,18 +6,22 @@ import { MaterialModule } from '@angular/material';
 
 import { RESTAPIModule, CONFIGURATION, AuthenticationService } from '@plone/restapi-angular';
 import { DebugBarComponent } from './debug-bar.component';
+import { MainNaviComponent } from './main-navi.component';
 import { AdvancedPloneViews } from './traversal';
 import { DocumentView } from './views/document.component';
+import { PloneSiteViewComponent } from './views/plone-site.component';
 import { TypeMarker } from './type-marker';
-import { Marker } from 'angular-traversal';
-
 import { AppComponent } from './app.component';
+
+import { Marker } from 'angular-traversal';
 
 @NgModule({
   declarations: [
     AppComponent,
     DebugBarComponent,
-    DocumentView
+    DocumentView,
+    PloneSiteViewComponent,
+    MainNaviComponent
   ],
   imports: [
     BrowserModule,
@@ -30,14 +34,14 @@ import { AppComponent } from './app.component';
     AdvancedPloneViews,
     {
       provide: CONFIGURATION, useValue: {
-        BACKEND_URL: 'http://localhost:8080/Plone',
+        BACKEND_URL: 'http://localhost:8080/fd',
       }
     },
-    AuthenticationService,
     { provide: Marker, useClass: TypeMarker },
   ],
   entryComponents: [
     DocumentView,
+    PloneSiteViewComponent
   ],
   bootstrap: [AppComponent]
 })

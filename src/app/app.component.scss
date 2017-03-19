@@ -4,7 +4,10 @@
         left: 3em;
         position: absolute;
     }
-
+    color: black;
+    img {
+            padding-left: 2em;
+    }
 }
 
 .hamburger-button, .search-button, .search-close-button {
@@ -21,7 +24,7 @@
     position: fixed;
 }
 .hamburger-button .material-spec-icon {
-    color: #fff;
+    color: black;
     width: 24px;
     vertical-align: middle;
 }

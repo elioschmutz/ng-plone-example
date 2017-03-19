@@ -1,0 +1,91 @@
+#navi-wrapper {
+    background-color: #4a555b;
+    background-image: -moz-linear-gradient(top, #70777d, #4a555b);
+    background-image: -ms-linear-gradient(top, #70777d, #4a555b);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70777d), to(#4a555b));
+    background-image: -webkit-linear-gradient(top, #70777d, #4a555b);
+    background-image: -o-linear-gradient(top, #70777d, #4a555b);
+    background-image: linear-gradient(top, #70777d, #4a555b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70777d', endColorstr='#4a555b', GradientType=0);
+    box-shadow: 0 1px 0 #787f86 inset, 0 0 0 1px #4a555b;
+    -moz-box-shadow: 0 1px 0 #787f86 inset, 0 0 0 1px #4a555b;
+    -webkit-box-shadow: 0 1px 0 #787f86 inset, 0 0 0 1px #4a555b;
+    position: absolute;
+    width: 100%;
+    clear: both;
+    z-index: 100;
+    #portal-globalnav {
+        border-right: 1px solid #000;
+        border-right: 1px solid rgba(0,0,0,0.2);
+        float: left;
+        display: block !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        .triangle {
+            bottom: -1px;
+            display: block;
+            height: 5px;
+            margin-left: -1em;
+            position: absolute;
+            width: 100%;
+        }
+        a {
+            font-size: 125%;
+            line-height: 2.5em;
+            letter-spacing: 0.04em;
+            color: #fff;
+            cursor: pointer;
+            text-shadow: 0px 1px 0px #000;
+            padding: 0 1em;
+            display: block;
+            float: left;
+            border-left: 1px solid #000;
+            border-left: 1px solid rgba(0,0,0,0.2);
+            position: relative;
+        }
+        li.selected a {
+            background-color: #3387a1;
+            background-image: -moz-linear-gradient(top, #3387a1, #3387a1);
+            background-image: -ms-linear-gradient(top, #3387a1, #3387a1);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3387a1), to(#3387a1));
+            background-image: -webkit-linear-gradient(top, #3387a1, #3387a1);
+            background-image: -o-linear-gradient(top, #3387a1, #3387a1);
+            background-image: linear-gradient(top, #3387a1, #3387a1);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3387a1', endColorstr='#3387a1', GradientType=0);
+        }
+        li.selected a {
+            box-shadow: 0 1px 0 #3997b4 inset, 0 -1px 0 #4a555b;
+            -moz-box-shadow: 0 1px 0 #3997b4 inset, 0 -1px 0 #4a555b;
+            -webkit-box-shadow: 0 1px 0 #3997b4 inset, 0 -1px 0 #4a555b;
+        }
+
+        li.selected a, #portal-globalnav a:hover {
+            text-decoration: none;
+        }
+        li {
+            display: inline;
+        }
+    }
+    div.row {
+        float: left;
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    div.position-0 {
+        margin-left: -99.60159%;
+    }
+     div.width-16 {
+        width: 99.20319%;
+    }
+     div.cell {
+        position: relative;
+        float: left;
+        left: 100%;
+    }
+    .fixedWidth {
+        width: 90%;
+        margin: 0 auto;
+        width: 1004px;
+    }
+}

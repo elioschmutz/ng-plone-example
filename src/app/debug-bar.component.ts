@@ -27,7 +27,7 @@ export class DebugBarComponent implements OnInit {
 
   login(): void {
     console.log(this.authenticationService.isAuthenticated.value);
-    this.authenticationService.login('admin', 'admin');
+    this.authenticationService.login('zopemaster', 'admin');
   }
 
   logout(): void {
