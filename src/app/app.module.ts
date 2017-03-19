@@ -10,6 +10,7 @@ import { MainNaviComponent } from './main-navi.component';
 import { AdvancedPloneViews } from './traversal';
 import { DocumentView } from './views/document.component';
 import { PloneSiteViewComponent } from './views/plone-site.component';
+import { RepositoryViewComponent } from './views/repository.component';
 import { TypeMarker } from './type-marker';
 import { AppComponent } from './app.component';
 
@@ -21,7 +22,8 @@ import { Marker } from 'angular-traversal';
     DebugBarComponent,
     DocumentView,
     PloneSiteViewComponent,
-    MainNaviComponent
+    MainNaviComponent,
+    RepositoryViewComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { Marker } from 'angular-traversal';
   ],
   entryComponents: [
     DocumentView,
-    PloneSiteViewComponent
+    PloneSiteViewComponent,
+    RepositoryViewComponent
   ],
   bootstrap: [AppComponent]
 })

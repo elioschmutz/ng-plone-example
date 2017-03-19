@@ -1,0 +1,26 @@
+<h1>{{context.title}}</h1>
+<md-tab-group>
+  <md-tab label="Übersicht">
+
+      <table class="ui compact celled definition table">
+          <tbody><tr>
+              <th>Titel</th>
+              <td>
+                  <span id="form-widgets-title" class="text-widget textline-field">{{context.title}}</span>
+              </td>
+          </tr>
+          <tr>
+              <th>Dokumentdatum</th>
+              <td>
+                  <span id="form-widgets-IDocumentMetadata-document_date" class="datepicker-widget date-field">{{context.document_date}}
+                  </span>
+
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</md-tab>
+<md-tab label="Versionen"></md-tab>
+<md-tab label="Jorunal"></md-tab>
+<md-tab label="Info"></md-tab>
+</md-tab-group>

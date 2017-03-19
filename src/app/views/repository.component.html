@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let obj of context.items">
+        <a traverseTo="{{obj['@id'].replace('http://localhost:8080/fd', '')}}">{{obj.title}}</a>
+    </li>
+</ul>

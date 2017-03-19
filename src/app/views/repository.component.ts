@@ -3,9 +3,10 @@ import { Traverser } from 'angular-traversal';
 
 @Component({
   selector: 'plone-view',
-  templateUrl: './document.component.html',
+  templateUrl: './repository.component.html',
+  styleUrls: ['./repository.component.scss']
 })
-export class DocumentView implements OnInit {
+export class RepositoryViewComponent implements OnInit {
 
   private context: any;
   private text: string;
